@@ -1,0 +1,19 @@
+<html>
+<script>
+    let i = 0
+    var charset = ""
+    while (i < 500) {
+        //var hex = i.toString(16)
+        //console.log(hex)
+        charset += String.fromCodePoint(i)
+        i++
+    }
+    console.log("charset:",charset);
+    document.body.innerHTML += charset;
+    async () => {
+    	await navigator.clipboard.writeText(charset);
+        console.log("copied.");
+    }
+</script>
+<body></body>
+</html>
